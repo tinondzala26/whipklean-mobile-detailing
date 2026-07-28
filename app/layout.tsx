@@ -7,9 +7,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
-  const title = "WhipKlean | Vehicle Detailing & Protection";
+  const title = "WhipKlean | Mobile Vehicle Detailing & Protection";
   const description =
-    "Canadian vehicle detailing for cars, SUVs, trucks, vans, and work vehicles. Deep cleaning, careful washing, and corrosion-conscious protection.";
+    "Canadian mobile vehicle detailing at your home, workplace, or fleet location. Deep cleaning, careful washing, and corrosion-conscious protection.";
 
   return {
     title,
@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       type: "website",
       url: origin,
-      images: [{ url: `${origin}/og.png`, width: 1733, height: 907, alt: "WhipKlean Canadian vehicle detailing" }],
+      images: [{ url: `${origin}/og.png`, width: 1733, height: 907, alt: "WhipKlean Canadian mobile vehicle detailing" }],
     },
     twitter: {
       card: "summary_large_image",

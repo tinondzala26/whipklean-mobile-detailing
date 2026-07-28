@@ -32,10 +32,10 @@ const services = [
 ];
 
 const process = [
-  ["Tell us your ride", "Share your vehicle size, condition, and the areas that need attention."],
-  ["Get a clear quote", "We recommend only the service your vehicle actually needs."],
-  ["We get into it", "Careful tools and proven products reach beyond the obvious surfaces."],
-  ["Drive away protected", "Enjoy a cleaner vehicle with surfaces prepared for Canadian roads."],
+  ["Tell us your ride", "Share your vehicle, condition, service address, and the areas that need attention."],
+  ["Confirm the location", "We confirm the callout area, safe working space, access, and weather plan."],
+  ["We come to you", "Our mobile setup arrives at your approved home, workplace, or fleet location."],
+  ["Drive away protected", "Enjoy a cleaner vehicle without losing time travelling to a detailing shop."],
 ];
 
 const vehicleTypes = ["Cars", "SUVs", "Trucks", "Vans", "Work vehicles"];
@@ -52,8 +52,8 @@ export default function Home() {
   return (
     <main>
       <div className="topbar">
-        <span>Canadian-owned & operated</span>
-        <span>Serving vehicles of every size</span>
+        <span>Canadian-owned mobile detailing</span>
+        <span>We come to your home, workplace or fleet</span>
         <a href="#quote">Get a free quote →</a>
       </div>
 
@@ -80,6 +80,7 @@ export default function Home() {
         </button>
         <nav className={menuOpen ? "nav-open" : ""} aria-label="Main navigation">
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="#mobile" onClick={() => setMenuOpen(false)}>Mobile service</a>
           <a href="#protection" onClick={() => setMenuOpen(false)}>Why WhipKlean</a>
           <a href="#process" onClick={() => setMenuOpen(false)}>How it works</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
@@ -100,20 +101,21 @@ export default function Home() {
         />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <p className="eyebrow"><span /> Detail beyond the surface</p>
-          <h1>Your ride.<br /><em>Seriously klean.</em></h1>
+          <p className="eyebrow"><span /> Mobile detail beyond the surface</p>
+          <h1>We bring<br /><em>the klean.</em></h1>
           <p className="hero-copy">
-            From quick refreshes to the hidden, hard-to-reach details, we clean
-            and protect vehicles of every size for life on Canadian roads.
+            WhipKlean comes to your home, workplace, or fleet. From quick
+            refreshes to hard-to-reach details, we clean and protect vehicles
+            of every size right where they are.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#quote">Get a free quote <b>→</b></a>
             <a className="text-link" href="#services">Explore our services <span>↓</span></a>
           </div>
           <div className="hero-proof">
-            <div><strong>2024</strong><span>Proudly established</span></div>
-            <div><strong>All sizes</strong><span>Cars to work vehicles</span></div>
-            <div><strong>Protected</strong><span>Corrosion-conscious care</span></div>
+            <div><strong>We travel</strong><span>No shop visit required</span></div>
+            <div><strong>All sizes</strong><span>Cars to fleet vehicles</span></div>
+            <div><strong>Protected</strong><span>Canadian-road care</span></div>
           </div>
         </div>
       </section>
@@ -125,8 +127,8 @@ export default function Home() {
             <h2>More than a car wash.</h2>
           </div>
           <p>
-            Every service is vehicle-safe, detail-focused, and tailored to the
-            size and condition of your ride.
+            Every mobile service is vehicle-safe, detail-focused, and tailored
+            to your ride, location, and Canadian driving conditions.
           </p>
         </div>
         <div className="service-grid">
@@ -147,6 +149,31 @@ export default function Home() {
           ))}
         </div>
         <p className="services-note">Not sure what you need? <a href="#quote">Tell us about your vehicle</a> and we’ll point you in the right direction.</p>
+      </section>
+
+      <section className="mobile-service section" id="mobile">
+        <div className="mobile-intro">
+          <p className="eyebrow dark"><span /> Your location is our workspace</p>
+          <h2>Professional detailing.<br /><em>Zero shop commute.</em></h2>
+          <p>
+            WhipKlean has no fixed customer-facing shop. Our mobile team travels
+            to an approved service location so your vehicle can be detailed
+            while you stay home, work, or keep your fleet moving.
+          </p>
+        </div>
+        <div className="mobile-grid">
+          <article><span>01</span><h3>Home callouts</h3><p>A driveway or other safe private area with enough room to work around the vehicle.</p></article>
+          <article><span>02</span><h3>Workplace service</h3><p>With property approval, we detail while you work and coordinate access around the site.</p></article>
+          <article><span>03</span><h3>Fleet locations</h3><p>Cars, trucks, vans, and work vehicles serviced together at an approved operating location.</p></article>
+          <article><span>04</span><h3>Weather-aware booking</h3><p>Outdoor appointments may be adjusted when weather or site conditions make safe, quality work impossible.</p></article>
+        </div>
+        <div className="site-check">
+          <strong>Before we arrive</strong>
+          <span>Confirm a safe, legal work area</span>
+          <span>Tell us about water or power access</span>
+          <span>Obtain property-manager permission</span>
+          <span>Keep keys and vehicle documents ready</span>
+        </div>
       </section>
 
       <section className="detail-story" id="protection">
@@ -216,13 +243,13 @@ export default function Home() {
           <p className="eyebrow"><span /> Small business. Serious care.</p>
           <h2>Built in Canada.<br />Built to care.</h2>
           <p>
-            WhipKlean started in 2024 with a simple belief: every vehicle
-            deserves careful, honest work—not rushed, one-size-fits-all
-            treatment. We’re a growing local business, and your trust is the
-            most important thing we clean up for.
+            WhipKlean started in 2024 with a simple belief: professional
+            detailing should fit around the customer. We built a mobile
+            operation instead of a fixed shop so careful, honest vehicle care
+            can come directly to Canadian homes, workplaces, and fleets.
           </p>
           <div className="about-values">
-            <span><b>01</b> Care over speed</span>
+            <span><b>01</b> Mobile convenience</span>
             <span><b>02</b> Clear recommendations</span>
             <span><b>03</b> Protection-minded products</span>
           </div>
@@ -239,19 +266,22 @@ export default function Home() {
         <div className="quote-heading">
           <p className="eyebrow dark"><span /> Ready when your ride is</p>
           <h2>Let’s get your whip <em>klean.</em></h2>
-          <p>Tell us a little about your vehicle. We’ll follow up with a clear recommendation and quote.</p>
+          <p>Tell us about your vehicle and service location. We’ll confirm the mobile callout details and send a clear quote.</p>
         </div>
         {sent ? (
           <div className="success-message" role="status">
             <span>✓</span>
             <h3>Request received.</h3>
-            <p>Thanks for choosing WhipKlean. We’ll be in touch to confirm the right service for your vehicle.</p>
+            <p>Thanks for choosing WhipKlean. We’ll be in touch to confirm your service, callout area, and location requirements.</p>
             <button type="button" onClick={() => setSent(false)}>Send another request</button>
           </div>
         ) : (
           <form className="quote-form" onSubmit={submitQuote}>
             <label>Name<input name="name" required placeholder="Your name" /></label>
             <label>Phone or email<input name="contact" required placeholder="How should we reach you?" /></label>
+            <label className="full">Mobile service address
+              <input name="address" required placeholder="Street, city and province" />
+            </label>
             <label>Vehicle type
               <select name="vehicle" required defaultValue="">
                 <option value="" disabled>Select your vehicle</option>
@@ -265,26 +295,68 @@ export default function Home() {
                 <option>Not sure yet</option>
               </select>
             </label>
+            <label>Work area
+              <select name="work-area" required defaultValue="">
+                <option value="" disabled>Select the setup</option>
+                <option>Private driveway</option>
+                <option>Workplace parking</option>
+                <option>Fleet / commercial property</option>
+                <option>Other approved private area</option>
+              </select>
+            </label>
+            <label>Water & power
+              <select name="utilities" required defaultValue="">
+                <option value="" disabled>What is available?</option>
+                <option>Water and power available</option>
+                <option>Water only</option>
+                <option>Power only</option>
+                <option>Neither / not sure</option>
+              </select>
+            </label>
             <label className="full">Anything we should know?
               <textarea name="details" rows={4} placeholder="Stains, pet hair, winter salt, vehicle size, or anything else..." />
             </label>
             <button className="button dark-button full" type="submit">Request my quote <b>→</b></button>
           </form>
         )}
+        <div className="booking-extras full">
+          <details className="contact-details">
+            <summary>
+              <span><small>Need help before booking?</small>Contact WhipKlean</span>
+              <b>+</b>
+            </summary>
+            <div>
+              <a href="mailto:whipklean@yahoo.com">whipklean@yahoo.com</a>
+              <a href="tel:+14165550147">(416) 555-0147 <small>Temporary number</small></a>
+              <p>Mobile detailing by appointment. Service location and travel area are confirmed with every quote.</p>
+            </div>
+          </details>
+          <div className="agreement-download">
+            <div>
+              <span>Before your appointment</span>
+              <h3>Mobile Service Authorization Agreement</h3>
+              <p>Review, complete, and sign the fillable PDF covering site access, insurance, licensing, and limited vehicle movement at the approved service location.</p>
+              <small>Temporary draft. Canadian legal review required before operational use.</small>
+            </div>
+            <a className="button dark-button" href="/docs/whipklean-mobile-service-agreement.pdf" download>
+              Download PDF <b>↓</b>
+            </a>
+          </div>
+        </div>
       </section>
 
       <footer>
         <div className="footer-brand">
           <Image src="/images/whipklean-logo.png" alt="" width={86} height={86} />
-          <div><strong>WHIP<span>KLEAN</span></strong><p>Detail beyond the surface.</p></div>
+          <div><strong>WHIP<span>KLEAN</span></strong><p>Mobile detail beyond the surface.</p></div>
         </div>
         <div className="footer-links">
-          <div><span>Navigate</span><a href="#services">Services</a><a href="#protection">Why WhipKlean</a><a href="#about">Our story</a></div>
-          <div><span>Get started</span><a href="#quote">Request a quote</a><a href="#process">How it works</a></div>
+          <div><span>Navigate</span><a href="#services">Services</a><a href="#mobile">Mobile service</a><a href="#protection">Why WhipKlean</a><a href="#about">Our story</a></div>
+          <div><span>Get started</span><a href="#quote">Request a quote</a><a href="mailto:whipklean@yahoo.com">whipklean@yahoo.com</a><a href="tel:+14165550147">(416) 555-0147</a></div>
         </div>
         <div className="footer-bottom">
           <span>© 2026 WhipKlean. Canada.</span>
-          <span>Established 2024 · Proudly small business</span>
+          <span>Established 2024 · Mobile by design</span>
         </div>
       </footer>
     </main>
