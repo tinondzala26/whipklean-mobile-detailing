@@ -336,7 +336,7 @@ export default function Home() {
               <span>Before your appointment</span>
               <h3>Mobile Service Authorization Agreement</h3>
               <p>Review, complete, and sign the fillable PDF covering site access, insurance, licensing, and limited vehicle movement at the approved service location.</p>
-              <small>Temporary draft. Canadian legal review required before operational use.</small>
+              <small>Fillable customer agreement for mobile appointments.</small>
             </div>
             <a className="button dark-button" href="/docs/whipklean-mobile-service-agreement.pdf" download>
               Download PDF <b>↓</b>

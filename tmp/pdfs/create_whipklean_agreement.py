@@ -159,7 +159,7 @@ def footer(canvas, doc):
     canvas.setFont("Helvetica", 6.5)
     canvas.drawString(MARGIN_X, 0.25 * inch, "whipklean@yahoo.com  |  (416) 555-0147")
     canvas.drawRightString(
-        PAGE_W - MARGIN_X, 0.25 * inch, f"Page {doc.page} of 4  |  Draft v1 - 28 July 2026"
+        PAGE_W - MARGIN_X, 0.25 * inch, f"Page {doc.page} of 4  |  Effective 28 July 2026"
     )
     canvas.restoreState()
 
@@ -220,7 +220,7 @@ def build():
         )
     )
     notice = Table(
-        [[Paragraph("TEMPORARY DRAFT - HAVE A LAWYER IN THE PROVINCE OF OPERATION REVIEW BEFORE USE", styles["Notice"])]],
+        [[Paragraph("CUSTOMER SERVICE AGREEMENT — REVIEW ALL TERMS BEFORE SIGNING", styles["Notice"])]],
         colWidths=[PAGE_W - 2 * MARGIN_X],
     )
     notice.setStyle(
@@ -525,9 +525,9 @@ def build():
         [
             [
                 Paragraph(
-                    "<b>IMPORTANT:</b> This template is general information, not legal advice. Vehicle, insurance, consumer-protection, "
-                    "privacy and electronic-signature rules vary across Canada. WhipKlean should have a licensed lawyer in the province or "
-                    "territory of operation review this agreement, the business insurance policy and the actual vehicle-movement procedure before use.",
+                    "<b>JURISDICTION NOTICE:</b> Vehicle, insurance, consumer-protection, privacy and electronic-signature requirements "
+                    "vary across Canada. This agreement is governed by the applicable laws at the confirmed service location, and mandatory "
+                    "consumer rights remain unaffected.",
                     styles["Small"],
                 )
             ]
