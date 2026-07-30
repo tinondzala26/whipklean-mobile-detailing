@@ -84,6 +84,7 @@ export default function Home() {
           <a href="#protection" onClick={() => setMenuOpen(false)}>Why WhipKlean</a>
           <a href="#process" onClick={() => setMenuOpen(false)}>How it works</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="/smart-scan/" onClick={() => setMenuOpen(false)}>Smart intake</a>
           <a className="nav-cta" href="#quote" onClick={() => setMenuOpen(false)}>
             Book your klean
           </a>
@@ -259,6 +260,17 @@ export default function Home() {
           <div className="bubble b2" />
           <div className="bubble b3" />
           <Image src="/images/whipklean-logo.png" alt="" width={420} height={420} />
+        </div>
+      </section>
+
+      <section className="smart-intake-promo section">
+        <div>
+          <p className="eyebrow dark"><span /> WhipKlean Smart Intake</p>
+          <h2>Show us the vehicle<br /><em>before we arrive.</em></h2>
+        </div>
+        <div>
+          <p>Upload three vehicle photos, record the details that matter, and prepare a cleaner service brief before requesting your mobile-detailing quote.</p>
+          <a className="button dark-button" href="/smart-scan/">Open Smart Intake <b>→</b></a>
         </div>
       </section>
 
