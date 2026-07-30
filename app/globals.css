@@ -261,6 +261,54 @@ nav a { font-size: 13px; font-weight: 700; }
 .intakeComplete span { color: #a5bbc5; font-size: 12px; }
 .intakeComplete a { color: var(--blue); font-weight: 900; font-size: 11px; }
 
+.scanHero { min-height: 620px; padding: 105px clamp(22px,7vw,110px) 78px; background: var(--ink); color: #fff; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 60px; }
+.scanHero > div:first-child > span,.captureSection .intakeTitle > span,.scanConsent > div:first-child > span { color: var(--blue); font-size: 9px; font-weight: 900; letter-spacing: .15em; }
+.scanHero h1 { max-width: 1050px; margin: 30px 0 25px; font-size: clamp(65px,8vw,126px); line-height: .84; letter-spacing: -.075em; }
+.scanHero h1 em { color: var(--blue); font-weight: 400; }
+.scanHero p { max-width: 560px; color: #a5bbc5; line-height: 1.65; }
+.captureSection { padding: 100px clamp(22px,7vw,110px); }
+.captureSection > .intakeTitle { display: grid; grid-template-columns: .65fr 1.25fr 1fr; gap: 5vw; align-items: start; }
+.captureSection .intakeTitle h2 { margin: 0; }
+.captureSection .intakeTitle p { margin: 0; }
+.captureGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 70px; }
+.captureCard { background: #fff; border: 1px solid var(--line); padding: 12px 24px 26px; min-width: 0; }
+.captureCard > div { height: 270px; margin: 0 -12px 24px; background: #e6eaeb; display: grid; place-items: center; position: relative; overflow: hidden; }
+.captureCard > div > b { color: #238fbd; font-size: 64px; letter-spacing: -.06em; }
+.captureCard > div > span { position: absolute; left: 13px; top: 13px; background: var(--ink); color: #fff; padding: 8px 10px; font-size: 8px; font-weight: 900; letter-spacing: .12em; }
+.captureCard > div img { width: 100%; height: 100%; object-fit: cover; }
+.captureCard h3 { margin: 0 0 8px; font-size: 24px; letter-spacing: -.03em; }
+.captureCard p { color: var(--muted); font-size: 12px; line-height: 1.55; min-height: 38px; }
+.captureCard > button { width: 100%; border: 0; background: var(--ink); color: #fff; padding: 16px; font-weight: 900; display: flex; justify-content: space-between; cursor: pointer; }
+.captureCard > label { display: block; text-align: center; margin-top: 14px; font-size: 9px; font-weight: 800; text-decoration: underline; cursor: pointer; }
+.captureCard > label input { position: absolute; opacity: 0; pointer-events: none; }
+.captureCard.captured > div > span { background: #237f4a; }
+.scanConsent { background: var(--blue-pale); padding: 88px clamp(22px,7vw,110px); display: grid; grid-template-columns: .9fr 1.25fr; gap: 8vw; align-items: center; }
+.scanConsent h2 { margin: 20px 0; font-size: clamp(46px,5vw,76px); line-height: .95; letter-spacing: -.055em; }
+.scanConsent p { color: var(--muted); line-height: 1.65; max-width: 560px; }
+.consentPanel { background: #fff; padding: 32px; border: 1px solid #b8dbe8; }
+.consentPanel > label { display: grid; grid-template-columns: auto 1fr; gap: 15px; align-items: start; cursor: pointer; }
+.consentPanel input { width: 22px; height: 22px; accent-color: #238fbd; }
+.consentPanel label span { display: flex; flex-direction: column; gap: 7px; }
+.consentPanel label small { color: var(--muted); line-height: 1.5; }
+.consentPanel > button { width: 100%; min-height: 60px; margin-top: 25px; border: 0; background: var(--ink); color: #fff; font-weight: 900; cursor: pointer; }
+.consentPanel > button:disabled { opacity: .28; cursor: not-allowed; }
+.scanNotice { background: #fff2d8; padding: 14px; color: #6b461e !important; font-size: 11px; }
+.cameraOverlay { position: fixed; inset: 0; z-index: 200; background: #030608; color: #fff; overflow: hidden; }
+.cameraOverlay video { width: 100%; height: 100%; object-fit: cover; }
+.cameraOverlay:after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.55),transparent 22%,transparent 72%,rgba(0,0,0,.75)); pointer-events: none; }
+.cameraOverlay header { position: absolute; z-index: 3; top: 0; left: 0; right: 0; padding: 26px; display: flex; justify-content: space-between; align-items: center; }
+.cameraOverlay header button { border: 0; background: rgba(0,0,0,.55); color: #fff; padding: 11px 15px; font-weight: 800; cursor: pointer; }
+.cameraOverlay header span { font-size: 9px; font-weight: 900; letter-spacing: .16em; }
+.cameraGuide { position: absolute; z-index: 2; left: 50%; top: 48%; transform: translate(-50%,-50%); width: min(82vw,900px); height: min(54vw,500px); border: 2px solid rgba(255,255,255,.9); border-radius: 22px; box-shadow: 0 0 0 200vmax rgba(0,0,0,.12); }
+.cameraGuide.document { width: min(68vw,520px); height: min(48vw,360px); border-radius: 8px; }
+.cameraGuide.plate { width: min(72vw,650px); height: min(24vw,210px); border-radius: 8px; }
+.cameraGuide span { position: absolute; top: -38px; left: 0; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.cameraGuide b { position: absolute; bottom: -34px; left: 0; font-size: 11px; }
+.shutter { position: absolute; z-index: 4; left: 50%; bottom: 28px; transform: translateX(-50%); width: 78px; height: 78px; border: 4px solid #fff; border-radius: 50%; background: transparent; padding: 7px; cursor: pointer; }
+.shutter i { display: block; width: 100%; height: 100%; border-radius: 50%; background: #fff; }
+.cameraError { position: absolute; z-index: 4; left: 50%; top: 50%; transform: translate(-50%,-50%); width: min(90%,500px); background: #fff; color: var(--ink); padding: 35px; text-align: center; }
+.cameraError button { border: 0; background: var(--ink); color: #fff; padding: 15px 20px; font-weight: 900; }
+
 footer { background: var(--ink); color: white; padding: 70px clamp(24px, 7vw, 110px) 30px; }
 .footer-brand { display: flex; align-items: center; gap: 16px; }
 .footer-brand img { border-radius: 50%; object-fit: cover; object-position: 50% 34%; }
@@ -321,7 +369,11 @@ footer { background: var(--ink); color: white; padding: 70px clamp(24px, 7vw, 11
   .about-values span { border-bottom: 1px solid rgba(255,255,255,.25); padding-bottom: 16px; }
   .foam-mark { min-height: 460px; }
   .quote { grid-template-columns: 1fr; gap: 55px; padding: 90px 24px; }
-  .smart-intake-promo,.intakeHero,.intakeSection,.intakeSummary { grid-template-columns: 1fr; }
+  .smart-intake-promo,.intakeHero,.scanHero,.intakeSection,.intakeSummary,.scanConsent { grid-template-columns: 1fr; }
+  .captureSection > .intakeTitle { grid-template-columns: 1fr; gap: 24px; }
+  .captureGrid { grid-template-columns: 1fr; }
+  .captureCard { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+  .captureCard > div { grid-row: 1 / 6; min-height: 330px; margin-bottom: 0; }
   .readiness { margin-top: 40px; }
   .intakeSummary > button,.intakeComplete { grid-column: 1; }
   .footer-links { margin: 50px 0 0; }
@@ -355,6 +407,16 @@ footer { background: var(--ink); color: white; padding: 70px clamp(24px, 7vw, 11
   .success-message { padding: 50px 24px; }
   .smart-intake-promo h2 { font-size: 52px; }
   .photoGrid,.intakeForm,.intakeSummary dl { grid-template-columns: 1fr; }
+  .scanHero { min-height: 620px; padding-top: 80px; }
+  .scanHero h1 { font-size: 17vw; }
+  .captureSection { padding: 75px 20px; }
+  .captureCard { display: block; }
+  .captureCard > div { height: 260px; margin-bottom: 24px; }
+  .scanConsent { padding: 70px 20px; }
+  .consentPanel { padding: 24px; }
+  .cameraGuide { width: 86vw; height: 58vw; }
+  .cameraGuide.document { width: 82vw; height: 57vw; }
+  .cameraGuide.plate { width: 84vw; height: 29vw; }
   .photoInput { min-height: 280px; }
   .intakeForm .wide,.summaryCondition { grid-column: 1; }
   .intakeComplete { grid-template-columns: 1fr; }
